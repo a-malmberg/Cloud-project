@@ -1,0 +1,41 @@
+<!-- 	Author: Anna Malmberg
+		Date: 25 April 2021
+-->
+
+<!DOCTYPE html>
+
+<html lang = "en">
+    <head>
+        <meta charset= "utf-8" />
+        <title>CSC-227 Final Project</title>
+    </head>
+    <body>
+        <p>Anna Malmberg</p>
+        <p>amalmberg@my.waketech.edu</p>
+        <p>Data Science and Programming Support Services</p>
+		
+		<p> Click the button to receive a book recommendation!</p>
+		
+		<button id ="book" onclick="myFunction()">Click for Book!</button>
+
+		<script>
+		const jsonData = 
+			{"001":"Kjell Westo: Yellow Sulphur Sky" , "011": "Ed Greenwood: Elminster: The Making of a Mage",
+			"002":"Joakim Zander: The Swimmer",
+			"012": "Leo Tolstoy: Anna Karenina",
+			"003":"Camilla Lackberg: The Girl in the Woods",}
+			
+		const values = Object.values(jsonData)
+		
+		const randomValue = values[parseInt(Math.random() * values.length)]
+		
+			function myFunction() {
+			document.getElementById("book").innerHTML = randomValue;
+			}
+		
+			document.getElementById("book").onclick = function() {myFunction()};
+<!-- add a reset/repeat function -->
+
+		</script>
+        </body>
+</html>
